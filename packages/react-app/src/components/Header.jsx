@@ -6,7 +6,7 @@ import React from "react";
 export default function Header() {
   return (
     <a href="/" rel="noopener noreferrer">
-      <PageHeader title="Yogi Boo NFT" subTitle="Best NFT collection ever" style={{ cursor: "pointer" }} />
+      <PageHeader title="Yogi Boo NFT" subTitle="🐈‍⬛  Best NFT collection ever" style={{ cursor: "pointer" }} />
     </a>
   );
 }
