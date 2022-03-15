@@ -21,6 +21,7 @@ import {
 } from "eth-hooks";
 import { useEventListener } from "eth-hooks/events/useEventListener";
 import { useExchangeEthPrice } from "eth-hooks/dapps/dex";
+import Mint from "./views/Mint";
 // import Hints from "./Hints";
 
 const { BufferList } = require("bl");
@@ -543,6 +544,16 @@ function App(props) {
               }}
               to="/"
             >
+              Mint
+            </Link>
+          </Menu.Item>
+          <Menu.Item key="/ntfs">
+            <Link
+              onClick={() => {
+                setRoute("/ntfs");
+              }}
+              to="/ntfs"
+            >
               YourCollectibles
             </Link>
           </Menu.Item>
@@ -589,7 +600,7 @@ function App(props) {
         </Menu>
 
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/ntfs">
             {/*
                 🎛 this scaffolding is full of commonly used components
                 this <Contract/> component will automatically parse your ABI
@@ -650,6 +661,16 @@ function App(props) {
             </div>
           </Route>
 
+          <Route exact path="/">
+            {/*
+                🎛 this scaffolding is full of commonly used components
+                this <Contract/> component will automatically parse your ABI
+                and give you a form to interact with it locally
+            */}
+            <div style={{ width: 640, margin: "auto", marginTop: 32, paddingBottom: 32 }}>
+              <Mint />
+            </div>
+          </Route>
           <Route path="/transfers">
             <div style={{ width: 600, margin: "auto", marginTop: 32, paddingBottom: 32 }}>
               <List
