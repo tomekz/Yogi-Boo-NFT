@@ -1,16 +1,14 @@
 import { Button } from "antd";
-
-function Mint() {
+import { useHistory } from "react-router-dom";
+function Mint({ tx, address, writeContracts, setRoute }) {
+  let history = useHistory();
   return (
     <Button
       type="primary"
-      onClick={() => {
-        // TODO implement transaction
-        // faucetTx({
-        //   to: address,
-        //   value: ethers.utils.parseEther("0.01"),
-        // });
-        // setFaucetClicked(true);
+      onClick={async () => {
+        await tx(writeContracts.YourCollectible.mintItem(address, "Qmc9hvaC9EUK7efbCfJc2QESB9NxW84jbPiTvz1p6Lh91d"));
+        history.push("/nfts");
+        setRoute("/nfts");
       }}
     >
       Mint 🐈‍⬛ ️

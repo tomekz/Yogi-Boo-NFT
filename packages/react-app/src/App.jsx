@@ -547,12 +547,12 @@ function App(props) {
               Mint
             </Link>
           </Menu.Item>
-          <Menu.Item key="/ntfs">
+          <Menu.Item key="/nfts">
             <Link
               onClick={() => {
-                setRoute("/ntfs");
+                setRoute("/nfts");
               }}
-              to="/ntfs"
+              to="/nfts"
             >
               YourCollectibles
             </Link>
@@ -600,7 +600,7 @@ function App(props) {
         </Menu>
 
         <Switch>
-          <Route exact path="/ntfs">
+          <Route exact path="/nfts">
             {/*
                 🎛 this scaffolding is full of commonly used components
                 this <Contract/> component will automatically parse your ABI
@@ -668,7 +668,7 @@ function App(props) {
                 and give you a form to interact with it locally
             */}
             <div style={{ width: 640, margin: "auto", marginTop: 32, paddingBottom: 32 }}>
-              <Mint />
+              <Mint tx={tx} address={address} writeContracts={writeContracts} setRoute={setRoute} />
             </div>
           </Route>
           <Route path="/transfers">
