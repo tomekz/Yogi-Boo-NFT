@@ -9,7 +9,7 @@ function Mint({ tx, address, writeContracts, setRoute, setIsUpdatingCollectibles
         type="primary"
         onClick={async () => {
           const res = await tx(
-            writeContracts.YourCollectible.mintItem(address, "Qmc9hvaC9EUK7efbCfJc2QESB9NxW84jbPiTvz1p6Lh91d"),
+            writeContracts.YogiBooNFT.mintItem(address, "Qmc9hvaC9EUK7efbCfJc2QESB9NxW84jbPiTvz1p6Lh91d"),
           );
           if (res) {
             res.wait();
