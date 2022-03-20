@@ -5,6 +5,7 @@ function Mint({ tx, address, writeContracts, setRoute, setIsUpdatingCollectibles
   let history = useHistory();
   return (
     <Fragment>
+      <img src={process.env.PUBLIC_URL + "/img/ethereumLogo.png"} />
       <Button
         type="primary"
         onClick={async () => {
