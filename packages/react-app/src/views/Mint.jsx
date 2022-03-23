@@ -5,12 +5,13 @@ function Mint({ tx, address, writeContracts, setRoute, setIsUpdatingCollectibles
   let history = useHistory();
   return (
     <Fragment>
-      <img src={process.env.PUBLIC_URL + "/img/ethereumLogo.png"} />
+      {/*  TODO remove image */}
+      {/* <img style={{ height: "50px" }} src={process.env.PUBLIC_URL + "/img/1.jpg"} /> */}
       <Button
         type="primary"
         onClick={async () => {
           const res = await tx(
-            writeContracts.YogiBooNFT.mintItem(address, "Qmc9hvaC9EUK7efbCfJc2QESB9NxW84jbPiTvz1p6Lh91d"),
+            writeContracts.YogiBooNFT.mintItem(address, "QmRZ5JT4qBUDLeb3Mag1EwWWa4vsxPScYVDcgvVVy5mbb8"),
           );
           if (res) {
             res.wait();
