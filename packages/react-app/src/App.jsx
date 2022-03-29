@@ -57,7 +57,6 @@ const { ethers } = require("ethers");
 
 /// 📡 What chain are your contracts deployed to?
 const targetNetwork = NETWORKS.kovan; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
-
 // 😬 Sorry for all the console logging
 const DEBUG = false;
 const NETWORKCHECK = true;
@@ -798,7 +797,7 @@ function App(props) {
         </Switch>
       </BrowserRouter>
 
-      <ThemeSwitch />
+      {/* <ThemeSwitch /> */}
 
       {/* 👨‍💼 Your account is in the top right with a wallet at connect options */}
       <div style={{ position: "fixed", textAlign: "right", right: 0, top: 0, padding: 10 }}>
