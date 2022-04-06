@@ -18,7 +18,7 @@ The goal of this collection of NFTs is to have fun AND offer everyone the possib
 
 - Press the `mint` button to start the mint transaction.
 
-- Once you're NFT is minted it will appear in "your collectibles" tab
+- Once your NFT is minted it will appear in "your collectibles" tab
 
   ![img](your-collectibles.png)
 
